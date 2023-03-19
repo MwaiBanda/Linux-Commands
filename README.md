@@ -11,7 +11,13 @@ or
 ```sh
 iptables -t nat -A OUTPUT -o lo -p tcp --dport 80 -j REDIRECT --to-port 8080
 ```
->  Useful for redirecting ports 
+>  Useful for redirecting ports i.e 
+``` sh
+iptables -A INPUT -i eth0 -p tcp --dport 80 -j ACCEPT
+iptables -A INPUT -i eth0 -p tcp --dport 8080 -j ACCEPT
+iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
+```
+
 
 #### Active ports
 ```sh 
