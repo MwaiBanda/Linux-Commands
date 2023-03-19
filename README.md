@@ -17,7 +17,19 @@ iptables -A INPUT -i eth0 -p tcp --dport 80 -j ACCEPT
 iptables -A INPUT -i eth0 -p tcp --dport 8080 -j ACCEPT
 iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
 ```
-
+then 
+```sh 
+ sudo apt-get install iptables-persistent
+```
+or if configured 
+```sh 
+ sudo dpkg-reconfigure iptables-persistent
+```
+then
+```sh
+sudo iptables-save | sudo tee /etc/iptables/rules.v4
+sudo ip6tables-save | sudo tee /etc/iptables/rules.v6 
+```
 
 #### Active ports
 ```sh 
