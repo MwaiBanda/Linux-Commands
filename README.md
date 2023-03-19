@@ -6,6 +6,11 @@ Useful Linux Commands
 ```sh
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
 ```
+or 
+
+```sh
+iptables -t nat -A OUTPUT -o lo -p tcp --dport 80 -j REDIRECT --to-port 8080
+```
 >  Useful for redirecting ports 
 
 #### Active ports
