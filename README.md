@@ -49,4 +49,10 @@ docker pull [repository]/[name]:[tag]
 ```sh 
 docker run -p 8080:[port] postack
 ```
-> Useful for running  docker at specific ports
+> Useful for running  docker at specific ports. **Note:** prefix with `screen`cmd to run after ssh connection closed
+
+### Docker running containers
+```sh 
+docker ps
+```
+
