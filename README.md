@@ -61,6 +61,8 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 ## Other Useful Commands 
 Other useful commands
 
+## Docker
+Useful docker commands
 ### Docker pull 
 ```sh 
 docker pull [repository]/[name]:[tag] 
@@ -70,7 +72,7 @@ docker pull [repository]/[name]:[tag]
 
 ### Docker run 
 ```sh 
-docker run -p 8080:[port] postack
+docker run -p 8080:[port] [repository]/[name]:[tag]
 ```
 > Useful for running  docker at specific ports. **Note:** prefix with `screen`cmd to run after ssh connection closed
 
@@ -78,4 +80,10 @@ docker run -p 8080:[port] postack
 ```sh 
 docker ps
 ```
+> Useful for checking running containers 
 
+### Docker `stop` running containers
+```sh 
+docker stop [repository]/[name]:[tag]
+```
+> Useful to stop running containers
