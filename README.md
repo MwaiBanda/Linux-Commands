@@ -37,6 +37,12 @@ netstat -ntlp | grep LISTEN
 ```
 > Useful to check ports actively open 
 
+## Other Useful Commands 
+Other useful commands
+
+## Docker
+Useful docker commands
+
 #### Installing Docker CLI 
 ```sh 
 sudo apt-get install      ca-certificates      curl      gnupg      lsb-release
@@ -58,11 +64,6 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 > Useful to install docker for unbuntu
 
-## Other Useful Commands 
-Other useful commands
-
-## Docker
-Useful docker commands
 ### Docker pull 
 ```sh 
 docker pull [repository]/[name]:[tag] 
